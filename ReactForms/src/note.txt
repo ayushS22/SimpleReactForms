@@ -1,0 +1,62 @@
+import React, { useState } from 'react'
+
+export const Forms = () => { // named export hay so import with curly braces 
+
+
+    const  [fullName , setFullName] = useState("");
+
+
+    //input me onchange honay par ek function call karwao
+    const FullNameChange = (event)=>{//onchange event ke through call ho raha hay toh event object bhi hogi
+      console.log(event.target.value);
+      //state variable (fullName) ki value me agar koi change hoga toh toh us change karwaenge with updater function
+      //input me omchange hpnay par state variable me change ho or state variable me change kaise hota hay wo updater function karta hay
+      setFullName(event.target.value);
+    }
+  return (
+    <div>
+    <label htmlFor='username'>Full Name</label>
+     <input id='username' placeholder='enter your full name' type='text' value ={fullName} onChange={FullNameChange} />
+     <button>Submit</button>
+
+
+
+    </div>
+  )
+}
+
+//Explaination
+
+/* input change-----> onChange event hua ------->onChange jaise hi hua toh usne ek function call lagaya jo state variable ki value ko update karega with the help of setState updater function
+                         */
+
+
+
+
+
+
+[event.target.name]
+
+The square brackets tell JavaScript to use the value of the variable as the key in an object.
+
+So [event.target.name] → "username" dynamically, or "remarks" if you type in the remarks box.
+
+
+
+
+
+Question: What is [event.target.name] in React forms?
+
+Answer:
+
+[event.target.name] is a computed property name in JavaScript.
+
+It allows us to dynamically update a key in an object using the value of a variable.
+
+In a React controlled form:
+
+event.target.name → the name attribute of the input that triggered the event (e.g., "username", "remarks").
+
+event.target.value → the current value typed by the user.
+
+[event.target.name]: event.target.value → updates the correct field in the state object without hardcoding the key.
