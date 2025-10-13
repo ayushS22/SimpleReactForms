@@ -41,7 +41,7 @@ const CommentForms = () => {
   // Step 4️: Return JSX to render the form
   return (
     <div>
-      <h1>Give a Comments</h1>
+      <h1>Give a Comments here</h1>
 
       {/* Wrap all inputs in a <form> to handle submit */}
       <form onSubmit={handleSubmit}>
@@ -90,3 +90,4 @@ const CommentForms = () => {
 };
 
 export default CommentForms;
+
