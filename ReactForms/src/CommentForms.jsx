@@ -1,7 +1,7 @@
 // Importing the useState hook from React
 import { useState } from "react";
 
-const CommentForms = () => {
+const CommentForms = () => {//arrow function
   // Step 1 Initialize form state with default values
   // 'formData' holds all form input values
   // 'setFormData' updates them
@@ -90,4 +90,5 @@ const CommentForms = () => {
 };
 
 export default CommentForms;
+
 
